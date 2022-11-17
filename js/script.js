@@ -15,15 +15,19 @@ if (navigator.serviceWorker) {
   })
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  // input
-  const height = parseFloat(document.getElementById("height").value)
+const randomNumber = Math.floor(Math.random() * 6) + 1
 
-  // process
-  const volume = 2
-  // output
-  document.getElementById("volume").innerHTML = "Volume is: " + volume + "mm³"
+/**
+ * This function updates the slider value
+ */
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+
+  if (valueFromSlider == randomNumber) {
+    document.getElementById(answer).innerHTML = "The answer was " + randomNumber + "! You got it right!"
+  }
+    
+  if (valueFromSlider != randomNumber) {
+    document.getElementById("answer").innerHTML = "The answer was" + randomNumber + ". You got it wrong. :("
+  }
 }
