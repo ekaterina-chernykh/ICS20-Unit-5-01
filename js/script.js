@@ -15,16 +15,16 @@ if (navigator.serviceWorker) {
   })
 }
 
-const randomNumber = Math.floor(Math.random() * 6) + 1
-
 /**
  * This function updates the slider value
  */
 function updateSliderValue(valueFromSlider) {
   document.getElementById("slider-value").innerHTML = valueFromSlider
 
+  let randomNumber = Math.floor(Math.random() * 6) + 1
+
   if (valueFromSlider == randomNumber) {
-    document.getElementById(answer).innerHTML =
+    document.getElementById("answer").innerHTML =
       "The answer was " + randomNumber + "! You got it right!"
   }
 
