@@ -24,10 +24,12 @@ function updateSliderValue(valueFromSlider) {
   document.getElementById("slider-value").innerHTML = valueFromSlider
 
   if (valueFromSlider == randomNumber) {
-    document.getElementById(answer).innerHTML = "The answer was " + randomNumber + "! You got it right!"
+    document.getElementById(answer).innerHTML =
+      "The answer was " + randomNumber + "! You got it right!"
   }
-    
+
   if (valueFromSlider != randomNumber) {
-    document.getElementById("answer").innerHTML = "The answer was" + randomNumber + ". You got it wrong. :("
+    document.getElementById("answer").innerHTML =
+      "The answer was" + randomNumber + ". You got it wrong. :("
   }
 }
